@@ -27,19 +27,17 @@ app.delete('/user', (req, res) => {
 })
 
 
+
 // template engine
 function renderHello() {
-    let template = document.getElementById('template').innerHTML;
-    let rendered = Mustache.render(template, { name: 'Jamaal' });
+    var template = document.getElementById('template').innerHTML;
+    var rendered = Mustache.render(template, { name: 'Luke' });
     document.getElementById('target').innerHTML = rendered;
-}
-
+  }
 
 
 //Middleware
 let bodyParser = require("body-parser");
-
-
 
 //Error Handling
 app.use((err, req, res, next) => {

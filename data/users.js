@@ -1,20 +1,20 @@
 
-let users = [ {
+let books = [ {
     id: 1,
-    name: "Carey",
-    username: "cyare23",
+    name: "The Way Of The Superior Man",
+    author: "David Deida",
     email: "cy23@example.com",
   },
   {
     id: 2,
-    name: "Mikoto",
-    username: "Miiko",
+    name: "ASSATA",
+    username: "Assata Sharkur",
     email: "mikoto_u@example.com",
   },
   {
     id: 3,
-    name: "Ronald",
-    username: "RonRonRon",
+    name: "The Manipulated Man",
+    author: "Esther Vilar",
     email: "mronald@example.com",
   },
     

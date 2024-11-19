@@ -10,11 +10,11 @@ const routes = require("./routes/posts");
 
 
 //creating a Get,Post,Patch/Put and Delete routes
-app.get('/', (req, res) => {
+app.get('/data/users.js/:id', (req, res) => {
     res.send(`Hello, Jamaal, well come to express!`);
 })
 
-app.post('/', (req, res) => {
+app.post('/data/users/:id', (req, res) => {
     res.send("Here's a Post request");
 })
 

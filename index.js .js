@@ -3,25 +3,27 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+const users = require("./routes/users");
+const routes = require("./routes/posts");
 
 
 
 
 //creating a Get,Post,Patch/Put and Delete routes
 app.get('/', (req, res) => {
-    res.send('Hello, Jamaal');
+    res.send(`Hello, Jamaal, well come to express!`);
 })
 
 app.post('/', (req, res) => {
-    res.send()
+    res.send("Here's a Post request");
 })
 
-app.put('/', (req, res) => {
-    res.send()
+app.put('/user', (req, res) => {
+    res.send('Users asked for a Put request')
 })
 
-app.delete('/', (req, res) => {
-    res.send()
+app.delete('/user', (req, res) => {
+    res.send("Deleted Info from the Users")
 })
 
 
@@ -30,11 +32,14 @@ function renderHello() {
     let template = document.getElementById('template').innerHTML;
     let rendered = Mustache.render(template, { name: 'Jamaal' });
     document.getElementById('target').innerHTML = rendered;
-  }
+}
+
 
 
 //Middleware
 let bodyParser = require("body-parser");
+
+
 
 //Error Handling
 app.use((err, req, res, next) => {

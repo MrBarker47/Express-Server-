@@ -5,19 +5,34 @@ const port = 3000;
 
 
 
+//creating a Get,Post,Patch/Put and Delete routes
+app.get('/', (req, res) => {
+    res.send('Hello, Jamaal');
+})
+
+app.post('/', (req, res) => {
+    res.send()
+})
+
+app.put('/', (req, res) => {
+
+})
+
+app.delete('/', (req, res) => {
+    
+})
+
 
 // template engine
 function renderHello() {
     let template = document.getElementById('template').innerHTML;
-    let rendered = Mustache.render(template, { name: 'Luke' });
+    let rendered = Mustache.render(template, { name: 'Jamaal' });
     document.getElementById('target').innerHTML = rendered;
   }
 
 
 //Middleware
-let cookiePaser = require("cookie-paser");
-app.use(cookiePaser());
-
+let bodyParser = require("body-parser");
 
 //Error Handling
 app.use((err, req, res, next) => {

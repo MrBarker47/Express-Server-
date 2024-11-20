@@ -3,8 +3,8 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-const users = require("./routes/users");
-const routes = require("./routes/posts");
+const users = require("./data/users");
+const routes = require("./data/posts");
 
 
 
@@ -14,8 +14,8 @@ app.get('/data/users.js/:id/name', (req, res) => {
     res.send(`Hello, Jamaal, well come to express!`);
 })
 
-app.get('/data/users/', (req, res) => {
-    res.send(req.params);
+app.post('/data/posts', (req, res) => {
+    res.send('This if you want to post ');
 })
 
 app.put('/user', (req, res) => {
@@ -27,11 +27,10 @@ app.delete('/user', (req, res) => {
 })
 
 
-
 // template engine
 function renderHello() {
     var template = document.getElementById('template').innerHTML;
-    var rendered = Mustache.render(template, { name: 'Luke' });
+    var rendered = Mustache.render(template, { name: 'Jamaal' });
     document.getElementById('target').innerHTML = rendered;
   }
 

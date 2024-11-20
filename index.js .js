@@ -14,7 +14,7 @@ app.get('/data/users.js/:id/name', (req, res) => {
     res.send(`Hello, Jamaal, well come to express!`);
 })
 
-app.post('/data/posts', (req, res) => {
+app.post('/data/user', (req, res) => {
     res.send('This if you want to post ');
 })
 
@@ -28,11 +28,6 @@ app.delete('/user', (req, res) => {
 
 
 // template engine
-function renderHello() {
-    var template = document.getElementById('template').innerHTML;
-    var rendered = Mustache.render(template, { name: 'Jamaal' });
-    document.getElementById('target').innerHTML = rendered;
-  }
 
 
 //Middleware

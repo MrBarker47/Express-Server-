@@ -7,7 +7,14 @@ const users = require("./data/users");
 const routes = require("./data/posts");
 
 
+// template engine
+app.set('view engine', 'mustacha.js');
 
+function renderHello() {
+    var template = document.getElementById('template').innerHTML;
+    var rendered = Mustache.render(template, { name: 'Luke' });
+    document.getElementById('target').innerHTML = rendered;
+  }
 
 //creating a Get,Post,Patch/Put and Delete routes
 app.get('/data/users.js/:id/name', (req, res) => {
@@ -27,7 +34,6 @@ app.delete('/user', (req, res) => {
 })
 
 
-// template engine
 
 
 //Middleware

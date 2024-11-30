@@ -36,8 +36,20 @@ app.delete('/user', (req, res) => {
 
 
 
-//Middleware
+
 let bodyParser = require("body-parser");
+
+//Creating a middleware
+const log = function (req, res, next) {
+    console.log("Log In");
+    next()
+}
+
+const hell0 = function (req, res, next) {
+    console.log("Say Hello")
+    next()
+}
+
 
 //Error Handling
 app.use((err, req, res, next) => {
